@@ -1,0 +1,483 @@
+---
+title: "The Effect of the Sustainable Groundwater Management Act on California's Agricultural Output"
+subtitle: "A Difference-in-Difference Study"
+author: 
+  - name: Ong Chin Kang
+    email: ckong.2024@mse.smu.edu.sg
+    affiliation: Singapore Management University
+abstract: | 
+  In 2014, the US state of California passed the Sustainable Groundwater Management Act (SGMA). Its goal is to regulate groundwater use to prevent long-term depletion. These regulations restrict how much groundwater can be drawn, and as such may lead to a fall in agricultural output. Therefore, the question that this paper seeks to answer is this: Did 2014's SGMA significantly reduce California's agricultural output, compared to similar neighbouring states, which do not have equivalent water regulation? I use a difference-in-difference (DiD) approach, with Arizona, Nevada and New Mexico as controls. According to the results, there is insufficient evidence to conclude a negative effect of the SGMA on agricultural output. More variables may be needed to control for exogenous factors that can be important in mitigating omitted variable bias, and as such provide evidence of a negative effect of the SGMA on California's agricultural output. It is also possible that a longer post-treatment timeframe is needed for the negative post-treatment effect to be apparent. 
+format: pdf
+documentclass: article
+geometry: margin=2cm
+execute: 
+  echo: false
+  warning: false
+editor: source
+---
+
+# Introduction
+
+Before we proceed with the study, it is useful to understand why the Sustainable Groundwater Management Act (SGMA) was enacted. In particular, knowing the importance of groundwater as a water source and its role in agriculture provides the intuition behind the study, which it seeks to test in the empirical segment of this paper. 
+
+According to the California Water Boards website, groundwater is the water that is stored and accumulated beneath the surface of the earth. It accumulates among sediments which are collectively known as aquifiers. Such layers of aquifiers make up a groundwater basin. During an average year, California's 515 groundwater basins and subbasins contribute approximately 41% towards the State's total water supply. In drier years, the figure goes up to 60% or more, and thereby serves as a critical buffer against drought and climate change. 
+
+About 83% of Californians depend on groundwater for some portion of their water supply, and many communities are 100% reliant. But groundwater is being drawn faster than it can be replenished by natural systems. There is thus an important need to preserve groundwater and ensure sustainable use. This culminated in the SGMA in 2014, which seeks to regulate how groundwater is used. More information about it will be presented below, under the institutional background. 
+
+But restricting access in a bid to ensure sustainable use might lead to less productive crop yields. Therefore, this study explores whether a policy that restricts groundwater access for sustainable long-term use across generations can reduce agricultural output in the short term. 
+
+Below, I provide the institutional background and importantly, why I choose 2020 as the treatment year. 
+
+
+
+# Institutional Background
+
+According to the aforementioned California’s State Water Resources Control Board website, the Sustainable Groundwater Management Act (SGMA)  was enacted to halt overdraft- pumping and using groundwater faster than natural systems can replace them.  Careless use of groundwater can lead to adverse environmental consequences, such as a reduced buffer against droughts and climate change, subsiding lands, drying wells, the intrusion of saltwater into groundwater in coastal areas and the diminishing of surface water supplies. Therefore, there is a perceived need to protect this resource, found beneath the earth’s surface and forming a significant portion of earth’s water.
+
+The SGMA is a 3-bill legislative package that was passed by Governor Jerry Brown in 2014. It is the first legislative act that California passed in order to achieve sustainable groundwater management, and it requires for groundwater basins to reach sustainability within 20 years of implementing their plans, with a tighter deadline for critically overdrafted basins.
+
+There is an emphasis of enforcement at a local level. Local agencies are responsible for sustainably managing groundwater use in their area, with state agencies ensuring that they are in line with SGMA's goals. 
+
+According to California's Stanford University website, Water in the West, which provides useful summaries for the 4 states and allows comparisons across states, medium and high priority basins need to have Groundwater Sustainability Agencies (GSAs) for them by June 30, 2017. A GSA can be a single or a group of local agencies. A 'local agency' is a local public agency with water supply, water management, or land use responsibilities within a groundwater basin. Either existing local agencies or newly formed agencies can be used for the purpose. If there is no local agency with authority over water supply management, the county itself becomes the GSA. If no GSA was designated by the 2017 date, the state will act as the GSA for the given basin. 
+
+Crucially for this study, GSA(s) for each basin must prepare one or more Groundwater Sustainability Plans (GSPs) for the basin. Where there is critical overdraft for the med to high priority basin, the GSA must approve the GSP by 2020, and for those without conditions of critical overdraft, the GSAs have until 2022. The GSPs must achieve sustainability in the basin within 20 years of adoption- that means critically overdrafted basins have until 2040, while those that are not have until 2042.
+
+In terms of sustainability, SGMA requires that a basin be operated within its 'sustainable yield'- the "maximum quantity of water... that can be withdrawn annually from a groundwater supply" without causing an 'undesirable result'. 'Undesirable results' include: 
+
+- the chronic lowering of groundwater levels indicating a significant and unreasonable depletion of supply
+
+- significant and unreasonable reduction of groundwater storage
+
+- significant and unreasonable seawater intrusion
+
+- significant and unreasonable degraded water quality, including the migration of contaminant plumes that impair water supplies
+
+- significant and unreasonable land subsidence that substantially interferes with surface land uses.
+
+- depletions of interconnected surface water that have significant and unreasonable adverse impacts on beneficial uses of the surface water.
+
+A GSP must include “interim milestones” for every five years, as well as “measureable objectives,” to achieve the sustainability goal.
+
+In addition, non-compliant plans will be met with ‘state intervention’ by the State Water Board, an independent body within the California Environmental Protection Agency. There is thus reason to believe that local GSAs in different parts of California are required to be sufficiently accountable in ensuring that sustainability plans for groundwater use meet a certain standard, and they will be properly enforced.
+
+Given this information, even though SGMA was passed in 2014, GSAs are required to be formed only 2017, plans begin to be enacted only by 2020 (critically overdrafted med to high priority basins) and by 2022 (med to high priority basins without conditions of critical overdraft), with updates needed for every 5 years. Therefore, I set my treatment year to 2020, to balance between when I believe would be the beginning of when treatment would be felt, and data availability. 
+
+Next, I proceed to introduce and explain my choices of states that act as controls against the treated state, California. I choose Arizona, Nevada and New Mexico as control states. All 4 states are in the American southwest, and all are hot and dry, though to varying degrees. All states have measures implemented to manage ground water resources, but they were passed outside of the period of study, and any amendments made during the period of study do not match the statewide scale of the SGMA passed in 2014. I argue therefore that this makes them suitable candidates for controls in this study. 
+
+# Literature Review
+
+A general equilibrium analysis done by Calzadilla et al (2008) suggests that there is a trade-off between economic welfare and environmental sustainability. 
+
+In Aarnoudse et al (2012), a study on groundwater regulation was done in China. It found that as a result of closing wells, there was a fall in crop production. 
+
+Rudnick et al (2016) suggests that there will be administrative issues with the formation of GSAs that may threaten farm diversity and in particular, smaller farms or those with more varied resource needs will likely bear a bigger burden than larger farms with more resources at their disposal. Examples include increased costs and under-representation.
+
+Sunding and Roland-Holst (2020) conducted an economic analysis on the effects of water restrictions of the SGMA on growers in the San Joaquin Valley. 
+
+Yang (2021) wrote an undergraduate thesis on the causal effects of the SGMA, but it was an analysis on changes in farm structure, similar in theme to the paper by Rudnick et al (2016) that was mentioned earlier, where it is mentioned that the SGMA challenges farm diversity in California. It is interesting to note, however, that Yang had found that there is statistical evidence that the share of small farms decrease in the models that he used, similar to what Rudnick et al (2016) had warned about.  
+
+While the hypothesis aligns with the intuition of several studies that regulatory restrictions linked with sustainability initiatives will have an adverse effect on economic output, this study aims to determine the economic impact of a water sustainability policy on a single state- specifically the largest producing state in the US for agriculture output. 
+
+
+# Data 
+
+## Agriculture, Forestry, Fishing and Hunting Output Data
+
+The data is Agriculture, Forestry, Fishing and Hunting (affh) Gross Domestic Product (GDP) of California, Arizona, Nevada and New Mexico. It is quarterly data from 2005Q1 to 2024Q3, and it is obtained from the Bureau of Economic Analysis (BEA) website, which is an official website of the United States government.
+
+The output data in terms of current dollars suggest a huge disparity in the scale of the outputs between California and that of the other states, as California's output is far higher than that of the other states. Figure 1 and Table 1 below depicts this visually and in numerical terms.
+
+```{r load-libraries, message = F}
+
+library(tidyverse) # general data manipulation
+library(readxl) # excel data
+library(stargazer) # present the type of output used in papers
+library(ivreg) # if we need to use instruments
+library(tsibble) # for time series data
+library(fixest) # for fixed effects regression 
+library(broom) # for neat data presentation
+library(modelsummary)
+
+
+```
+
+
+```{r visualise-raw-output, warning = F, message = F, echo = F, fig.width = 8, fig.height = 5, dpi = 300}
+
+"Table1.xlsx" %>% # (raw) output in millions of current dollars
+  read_xlsx(range = "B6:CC10") %>% # specify cell range in excel sheet
+  pivot_longer(cols = 2:80, 
+               names_to = "date",
+               values_to = "affh_GDP_millions_curr_dol") %>% # each quarter has its own row
+  rename(state = GeoName) %>% 
+  mutate(date = yearquarter(date)) %>% 
+  mutate(year = year(date)) %>% 
+  mutate(quarter = quarter(date)) %>% 
+  arrange(date) -> raw_output
+
+raw_output %>% 
+  ggplot(aes(x = date, 
+             y = affh_GDP_millions_curr_dol, 
+             color = factor(state))) +
+  geom_line() + 
+  labs(title = "In Millions of Current Dollars", 
+       subtitle = "Agriculture, Forestry, Fishing and Hunting GDP by State 2005-2024 (Entire Period)", 
+       x = "Time (Year-Quarter)", 
+       y = "Output", 
+       color = "State",
+       caption = "Figure 1: Huge difference in scale between California's output and that of the control states. ")
+
+```
+
+```{r raw-output-summary, warning = F, message = F, echo = F}
+
+raw_output %>% 
+  select(date, state, affh_GDP_millions_curr_dol) %>% 
+  pivot_wider(names_from = "state", values_from = "affh_GDP_millions_curr_dol") %>% # re-arrange
+  select(-date) %>% # remove date column
+  select(California, Arizona, Nevada, "New Mexico") %>% # make sure it is of the right order
+  rename(New_Mexico = "New Mexico") %>% 
+  as.data.frame() %>% # stargazer does not accept tibbles
+  datasummary(California + Arizona + Nevada + New_Mexico ~ N + Mean + SD + Min + Max, 
+              data = .,
+              title = "Summary Statistics- Current Dollars (Millions)", output = "latex") %>% 
+  as.character() %>% 
+  str_replace("begin\\{table\\}", "begin\\{table\\}[H]") %>% 
+  cat(file = "raw_output_summary.tex")
+
+```
+
+\input{raw_output_summary.tex}
+
+
+To remedy this, I use output as aforementioned, expressed as an index, with the base period being 2005 Q1. This means that each state has a common starting point of 100 in 2005 Q1, and subsequently, the output of a state for any given period is expressed as a proportion of their respective base period outputs of 2005 Q1, multiplied by 100. Therefore, variations in subsequent periods are proportionate, relative to a given state's own output at 2005 Q1, instead of in absolute terms. 
+
+Using relative or proportionate terms instead of absolute output values can rectify the issue of the huge difference in the scale of output between California and the other states. It makes the comparison of how output trends evolve over time easier to compare. For one, changes over time in a major producing state such as Califoria will not overwhelm changes in other states that produce far less in absolute terms. Also, variations are measured against an output level that is at least somewhat representative of what a state normally produces in a given period. So variations will be measured against each given state's own representative value, magnifying seemingly insignificant changes of states producing at a smaller scale and vice versa. Comparisons will be made against itself first, then with others. 
+
+Below, I depict this in Figure 2 and Table 2, visually and numerically.
+
+
+```{r index-data-prep, warning = F, message = F, echo = F}
+
+treatment_year = 2020 # for running placebo tests
+
+affh <- "Table2.xlsx" %>% # using index data
+  read_xlsx(range = "B6:CC10") %>% # specify cell range in excel sheet
+  pivot_longer(cols = 2:80, 
+               names_to = "date", 
+               values_to = "affh_index") %>% # each quarter has its own row
+  rename(state = GeoName) %>% # rename to indicate state column
+  mutate(date = yearquarter(date)) %>% # convert date column format to 'yearquarter'
+  mutate(year = year(date)) %>% # year column
+  mutate(quarter = quarter(date)) %>% # quarter column
+  arrange(date) %>% # ascending order by date
+  mutate(treated = ifelse(state == "California", 1, 0), # indicate Cali as treated, others as ctrl
+         post_treatment = ifelse(year > treatment_year, 1, 0)) %>% # indicate period is after treatment
+  mutate(treated_post = treated * post_treatment) # treated * post interaction indicator term
+
+# including drought data
+
+drought_cali <- "DSCI_cali.csv" %>% 
+  read_csv() %>% 
+  select(Week, DSCI) %>% 
+  mutate(quarter = floor_date(Week, "quarter")) %>% 
+  group_by(quarter) %>% 
+  summarise(quarter_mean_DSCI = mean(DSCI)) %>% 
+  mutate(state = "California") %>% 
+  mutate(date = yearquarter(quarter)) %>% 
+  select(date, state, quarter_mean_DSCI)
+
+drought_ari <- "DSCI_arizona.csv" %>% 
+  read_csv() %>% 
+  select(Week, DSCI) %>% 
+  mutate(quarter = floor_date(Week, "quarter")) %>% 
+  group_by(quarter) %>% 
+  summarise(quarter_mean_DSCI = mean(DSCI)) %>% 
+  mutate(state = "Arizona") %>% 
+  mutate(date = yearquarter(quarter)) %>% 
+  select(date, state, quarter_mean_DSCI)
+
+drought_nev <- "DSCI_nevada.csv" %>% 
+  read_csv() %>% 
+  select(Week, DSCI) %>% 
+  mutate(quarter = floor_date(Week, "quarter")) %>% 
+  group_by(quarter) %>% 
+  summarise(quarter_mean_DSCI = mean(DSCI)) %>% 
+  mutate(state = "Nevada") %>% 
+  mutate(date = yearquarter(quarter)) %>% 
+  select(date, state, quarter_mean_DSCI)
+
+drought_nmex <- "DSCI_newmexico.csv" %>% 
+  read_csv() %>% 
+  select(Week, DSCI) %>% 
+  mutate(quarter = floor_date(Week, "quarter")) %>% 
+  group_by(quarter) %>% 
+  summarise(quarter_mean_DSCI = mean(DSCI)) %>% 
+  mutate(state = "New Mexico") %>% 
+  mutate(date = yearquarter(quarter)) %>% 
+  select(date, state, quarter_mean_DSCI)
+
+drought_cali %>% 
+  rbind(drought_ari) %>% 
+  rbind(drought_nmex) %>% 
+  rbind(drought_nev) %>% 
+  arrange(date) %>% 
+  inner_join(affh, by = c("date", "state")) %>% 
+  rename(drought_index = quarter_mean_DSCI) -> affh_2
+
+```
+
+
+
+```{r whole-period-visual, echo = F, message = F, warning = F, fig.width = 8, fig.height = 5, dpi = 300}
+
+affh %>%
+  ggplot(aes(x = date, 
+             y = affh_index, 
+             color = factor(state))) + 
+  geom_line() +
+  labs(subtitle = "Agriculture, Forestry, Fishing and Hunting Output 2005-2024 (Entire Period)", 
+       x = "Time (Year-Quarter)", 
+       y = "Output", 
+       color = "State", 
+       title = "Index: 2005Q1 = 100, all States",
+       caption = "Figure 2: Movements are proportionate change relative to 2005 Q1, instead of in absolute terms. ")
+
+
+```
+
+
+
+
+```{r index-summary-statistics, warning = F, message = F, echo = F}
+
+
+affh %>% 
+  select(date, state, affh_index) %>% 
+  pivot_wider(names_from = "state", values_from = "affh_index") %>% # re-arrange
+  select(-date) %>% # remove date column
+  select(California, Arizona, Nevada, "New Mexico") %>% # make sure it is of the right order
+  rename(New_Mexico = "New Mexico") %>% 
+  as.data.frame() %>% 
+  datasummary(California + Arizona + Nevada + New_Mexico ~ N + Mean + SD + Min + Max, 
+              data = .,
+              title = "Summary Statistics- Index ", output = "latex") %>% 
+  as.character() %>% 
+  str_replace("begin\\{table\\}","begin\\{table\\}[H]") %>% 
+  cat(file = "index_summary.tex")
+
+
+```
+
+\input{index_summary.tex}
+
+
+A problem with this is the arbitrary selection of 2005 Q1 as the point of reference when examining how outputs change across the time frame. There is no basis for this, and nothing that says that other periods are less suitable for use as a reference point. Yet I argue that the output level used as reference for each given state is at least somewhat representative of what the state normally produces, no matter how imperfect the reference point is (unless there are circumstances that are adverse enough that build a strong case against why that particular time period should be avoided). This is something that I mention in the preceding paragraph.
+
+Nonetheless, some alternative methods to solve the scaling problem and the perceived arbitrariness can be output per capita, output per unit farmland, or output per unit area of the state. But for this study, I use index values and observe how output changes proportionally from the starting point of 2005 Q1, due to the accessibility of the required data. Further development of this study can consider adopting such alternatives, among other possible changes and improvements that can be made, so as to improve on the shortcomings of this study, as will be discussed.
+
+
+## Drought Data
+
+I also introduce drought data for all states to control for environmental effects that affect the level of output for a given period. Taken from the US drought monitor website, the Drought Severity and Coverage Index (DSCI) is a numerical index that aggregates across 4 levels of drought severity, and 1 level of abnormal dryness not yet amounting to a drought. The U.S. drought monitor website provide weekly data for each state, which I then take the mean value quarter-by-quarter. 
+
+```{r}
+
+affh_2 %>% 
+  select(date, state, drought_index) %>% 
+  pivot_wider(names_from = "state", values_from = "drought_index") %>% 
+  select(-date) %>% 
+  select(California, Arizona, Nevada, "New Mexico") %>% 
+  rename(New_Mexico = "New Mexico") %>% 
+  as.data.frame() %>% 
+  datasummary(California + Arizona + Nevada + New_Mexico ~ N + Mean + SD + Min + Max, 
+              data = ., 
+              title = "Summary Statistics- Drought Index", output = "latex") %>% 
+  as.character() %>% 
+  str_replace("begin\\{table\\}", "begin\\{table\\}[H]") %>% 
+  cat(file = "drought_summary.tex")
+
+```
+
+\input{drought_summary.tex}
+
+
+## Variables
+
+Below I list the columns of the prepared data. This is a panel data set, with quarterly data from 2005Q1 to 2024Q3, so there are 316 observations, with 79 observations for the states of California (treated), Arizona, Nevada and New Mexico (controls). Below are the variables of the dataset:
+
+`state`: The name of the US state for a given observation
+
+`date`: The date of a given observation, which includes the year and quarter
+
+`affh_index`: Agriculture, Forestry, Fishing and Hunting Output expressed as an index where 2005 Q1 = 100 for all states
+
+`year`: The year of a given observation
+
+`quarter`: The quarter of a given observation
+
+`treated`: I(state = California), an indicator variable denoting whether the state of a given observation is California, the treated state. 1 if true, 0 otherwise
+
+`post-treatment`: I(year > 2020), an indicator variable denoting whether the observation date is after treatment (from 2021Q1 onwards). 1 if true, 0 otherwise
+
+`treated_post`: `treated` * `post-treatment`
+
+`drought_index`: DSCI values by year-quarter, averaged across weekly values. 
+
+
+
+
+# Parallel Trends
+
+A difference-in-difference analysis assumes that the treated and the controls follow parallel trends. If this does not hold, the model needs to account for this. There is no way to test this formally, but a glance at the plot above suggests that pre-treatment trends are very likely not parallel. Therefore, in the model below, I include linear trends for each state to control for the parallel trends violation.
+
+
+# Empirical Strategy
+
+As mentioned before, considering the timeline of events after the introduction of the SGMA in 2014, I set the treatment year as 2020. 
+
+$$
+\begin{aligned}
+  affh\_index_{s,\ t} &= \beta_{DiD}*treated\_post + \alpha_s + \gamma_t + \sum_s \delta_s *year + \beta_1 * drought\_index +  \epsilon_{i, t}^{(c)}
+\end{aligned}
+$$
+
+Here I present the difference-in-difference (DiD) model for measuring the effect of the SGMA on California's agricultural output. $affh\_index_{s, t}$ is the index of agriculture, forestry, fishing and hunting output with the value for 2005Q1 equal to 100 for all states. $\beta_{DiD}$ is the difference-in-difference (DiD) coefficient. It measures the average effect on the treated state, California, after the treatment has taken place. $\alpha_s$ is the state fixed effects, and $\gamma_t$ is the time fixed effect, where each time period is a year-quarter. $\delta_s$, $\forall s \in \{California,\ Nevada,\ Arizona\}$ are the coefficients for the linear state trends, and so the base state trend is that of New Mexico in this model. They account for the violation of the parallel trends assumption. $\beta_1$ is the coefficient for `drought_index`, which controls for the effects of drought conditions on output. $\epsilon_{s,t}^{(c)}$ is error term, clustered by state to account for within state correlations across time. 
+
+
+
+
+
+## Results
+
+```{r DiD-models-nice-table, results = "asis"}
+
+
+
+mdl1 <- feols(affh_index ~ treated_post, 
+                     data = affh_2)
+
+mdl2 <- feols(affh_index ~ treated_post, 
+                     data = affh_2,
+                     cluster = ~state)
+
+mdl3 <- feols(affh_index ~ treated_post | date, 
+                     data = affh_2,
+                     cluster = ~state)
+
+mdl4 <- feols(affh_index ~ treated_post | state + date, 
+                     data = affh_2,
+                     cluster = ~state)
+
+mdl5 <- feols(affh_index ~ treated_post + state:date | state + date, 
+                     data = affh_2 %>% mutate(date = as.numeric(date)),
+                     cluster = ~state)
+
+mdl6 <- feols(affh_index ~ treated_post + state:date + drought_index | state + date, 
+                     data = affh_2,
+                     cluster = ~state)
+
+
+reg_table <- modelsummary(list(
+  "(1)" = mdl1, 
+  "(2)" = mdl2, 
+  "(3)" = mdl3, 
+  "(4)" = mdl4, 
+  "(5)" = mdl5,
+  "(6)" = mdl6), 
+  stars = T, 
+  coef_map = c("(Intercept)" = "Constant", 
+               "treated_post" = "I(California after 2020)", 
+                  "stateArizona:date" = "Arizona Trend", 
+                  "stateCalifornia:date" = "California Trend", 
+                  "stateNevada:date" = "Nevada Trend", 
+                  "drought_index" = "Drought Index"),
+  notes = list("1: I(California after 2020) is an indicator function
+               that equals 1 if a given observation's state is California
+               and the observation date is 2021 Q1 onwards (inclusive), 
+               and 0 otherwise.\n 2: Here, New Mexico is used as reference 
+               for the respective state trends, assumed to be linear. "), 
+  output = "latex", 
+  title = "DiD Model Results")
+
+reg_table %>% 
+  as.character() %>% 
+  str_replace("begin\\{table\\}", "begin\\{table\\}[H]") %>% 
+  cat(file = "reg_table.tex")
+
+```
+
+\input{reg_table.tex}
+
+With reference to table 4, results suggest that clustering residuals by state to account for within state correlation across periods do not impact the model estimates in any significant way. Adding state and period fixed effects significantly reduce the positive bias of the DiD estimate, and it is no longer statistically significant, based on (3) and (4). Accounting for the violation of parallel trends before treatment, coefficient estimates of separate linear trends for each state are also introduced, which turn out to be statistically significant, as seen in (5) and (6). While remaining statistically insignificant, the estimate for the DiD coefficient fell sharply, which suggests that accounting for the violation of parallel trends further reduced the positive bias on the DiD coefficient, by a large amount. In (6), I included the drought variable to control for longer term environmental effects. While itself not statistically significant, it reduced the magnitude of the state trend coefficient estimates, which are themselves still statistically significant. This suggests that much of the difference in trends may have been caused by environmental factors. 
+
+The results of the final model (6) suggests that we do not have enough evidence that the SGMA reduced agricultural output in any meaningful way. Perhaps a longer time period after treatment is needed, or that more variables such as market factors that play a role in determining output needs to be incorporated into the model so that they will be controlled for. It is also likely that farmers had the time to incorporate means and technology that enable production to be more water efficient. The gap between the announcement at 2014 and the actual plan's approval in the 2020s may have given them adequate time to adapt to future water restrictions. 
+
+
+
+# Conclusion and Discussion
+
+To conclude, this model presents no evidence that the SGMA negatively impacts agricultural output in California, though results may not be conclusive yet. Perhaps a longer time frame for post-treatment is needed, or that more variables that control for market conditions- such as crop price indices, among other possible control variables, need to be included. 
+
+Furthermore, the literature review above suggests that the water restrictions of the SGMA will be felt by agricultural entities and communities (albeit perhaps at varying extents across them all). The model presented in this study is also likely incomplete, and so does not necessarily contradict the stances established in the previous studies. 
+
+Yield reductions will be the likely result of water restrictions- at least in the short-term. In the long-term, the onset of the SGMA can incentivise farmers to look for ways to mitigate the reduced access to groundwater- such as improving rainfall use (Turner 2004), and shifting focus from production per unit area to production per unit of water consumed- that is, increasing 'water productivity' (Fereres & Soriano, 2006). Indeed, the SGMA may yet be what is needed to push farmers in the right direction when it comes to efficient water use, similar to what Levidow et al (2014) discusses, which also covers lack of incentive to innovate. But as the mentioned study, along with Rudnick et al (2016), suggest, more needs to be done, such as in educating farmers and providing enough representation, so that certain communities or entities can cope better with the increasing costs and restrictions that are associated with the SGMA.
+
+{{< pagebreak >}}
+
+
+
+# References
+
+California Water Boards (n.d.). *Water Basics- Groundwater*. \newline
+https://water.ca.gov/Water-Basics/Groundwater
+
+California Water Boards (n.d.). *The Sustainable Groundwater Management Act*. \newline
+https://waterboards.ca.gov/water_issues/programs/sgma/about_sgma.html
+
+U.S. Bureau of Economic Analysis (December 20, 2024). *SQGDP2 Gross domestic product (GDP) by state*. (accessed Saturday, March 8, 2025).
+
+U.S. Drought Monitor. *Percent Area in U.S. Drought Monitor Categories*. \newline
+https://droughtmonitor.unl.edu/DmData/DataTables.aspx
+
+Water in the West, Stanford University, California. (n.d.). *California State Report*. \newline
+https://groundwater.stanford.edu/dashboard/california.html
+
+Water in the West, Stanford University, California. (n.d.). *Arizona State Report*. \newline
+https://groundwater.stanford.edu/dashboard/arizona.html
+
+Water in the West, Stanford University, California. (n.d.). *Nevada State Report*. \newline
+https://groundwater.stanford.edu/dashboard/nevada.html
+
+Water in the West, Stanford University, California. (n.d.). *New Mexico State Report*. \newline
+https://groundwater.stanford.edu/dashboard/new-mexico.html
+
+Arizona Department of Water Resources (n.d.). *OverView of the Arizona Groundwater Management Code*. https://www.azwater.gov/sites/default/files/media/Arizona%20Groundwater_Code_1.pdf
+
+California Legislature. (2014). *Senate Bill 1168, Sustainable Groundwater Management Act.* California Statutes. http://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201320140SB1168
+
+California Legislature. (2014). *Assembly Bill 1739, Sustainable Groundwater Management Act.* California Statutes. https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201320140AB1739
+
+California Legislature. (2014). *Senate Bill 1319, Sustainable Groundwater Management Act.* California Statutes. https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=201320140SB1319
+
+Calzadilla, A., Rehdanz, K., & Tol, R. S. (2010). The Economic Impact of More Sustainable Water Use in Agriculture: A Computable General Equilibrium Analysis. *Journal of Hydrology, 384*(3-4), 292-305.
+
+Aarnoudse, E., Bluemling, B., Wester, P., & Qu, W. (2012). The Role of Collective Groundwater Institutions in the Implementation of Direct Groundwater Regulation Measures in Minqin County, China. *Hydrogeology Journal, 20*(7), 1213.
+
+Rudnick, J., DeVincentis, A., & Mendez-Barrientos, L. E. (2016). The Sustainable Groundwater Management Act Challenges the Diversity of California Farms. *California Agriculture, 70*(4).
+
+Sunding, D., & Roland-Holst, D. (2020). Blueprint Economic Impact Analysis: Phase One Results. *Berkeley, CA: University of California, Berkeley, Working Paper*. https://www.restorethedelta.org/wpcontent/uploads/SJV-Blueprint-for-Extinction-Economic-Study-2-15-2020. pdf.
+
+Yang, E. (2021). An Analysis of the Causal Effects of the Sustainable Groundwater Management Act on California Farm Organizational Structure. https://escholarship.org/uc/item/79p4p6m2
+
+Turner, N. C. (2004). Agronomic Options for Improving Rainfall-Use Efficiency of Crops in Dryland Farming Systems. *Journal of Experimental Botany, 55*(407), 2413-2425.
+
+Fereres, E., & Soriano, M. A. (2007). Deficit Irrigation for Reducing Agricultural Water Use. *Journal of experimental botany, 58*(2), 147-159.
+ 
+
+
+
+
+
+
+
